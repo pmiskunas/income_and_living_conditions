@@ -407,4 +407,3 @@ ax.set_xticks(years)
 ax.set_xticklabels(years)
 
 plt.show()
-dfsdfsf
