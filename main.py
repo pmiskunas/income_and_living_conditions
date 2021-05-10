@@ -33,7 +33,6 @@ for i in f_list_a:
     dcta[int(i[-16:-12])] = df
     
 years = list(dcta.keys()) #sukurtas sąrašas nagrinėjamų metų (objektai int tipo)
-print(years)
 
 # padarom nauja dictionary su joinintom lentelem per namų ūkio ID. (metai : dataframe)
 dctall = {}
