@@ -7,4 +7,11 @@ All data files downloaded from  <b>[Official statistics portal](https://osp.stat
 * Firstly if you run "ALL_TO_CSV.py" the script reads xlsx files, and puts .csv files in another folder called "output_csv"
 * Then the main.py reads all of the .csv files, groups it by year into dictionaries and plots some graphs. 
 
-* The main goal was to learn some of matplotlib, pandas (working with dataframes, instead of mySQL) by analysing some data.
+The main goal was to learn some of matplotlib, pandas (working with dataframes, instead of mySQL) by analysing some data.
+
+   Different graphs for Households Income in cities and village:
+![myImage](https://github.com/pmiskunas/income_and_living_conditions/blob/master/Metin%C4%97s_pajamos.png?raw=true)
+
+
+   Dependence of one living condition on education:
+![image](https://github.com/pmiskunas/income_and_living_conditions/blob/master/Tualet%C5%B3_su_nutekamuoju_vandeniu_skai%C4%8Dius_pagal_i%C5%A1silavinim%C4%85.png?raw=true)
