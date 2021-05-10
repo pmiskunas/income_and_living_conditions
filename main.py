@@ -12,22 +12,28 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import glob
 import numpy as np
+import os
+
 
 dctu = {}   # žodynas namų ukių duomenims (metai : dataframe)
 dcta = {}   # žodynas asmenų duomenims (metai : dataframe)
-    
-f_list_u = glob.glob('*i.csv') #susirenkam namu ukiu .csv
+
+cwd = os.getcwd()  # getting current folder path
+nf = 'output_csv\\'  # new folder name
+path = os.path.join(cwd, nf)
+
+f_list_u = glob.glob(str(path + '*i.csv')) #susirenkam namu ukiu .csv
 for i in f_list_u:
     df = pd.read_csv(i)
-    dctu[int(i[0:4])] = df
+    dctu[int(i[-19:-15])] = df
 
-f_list_a = glob.glob('*s.csv') #susirenkam asmenu .csv
+f_list_a = glob.glob(str(path +'*s.csv')) #susirenkam asmenu .csv
 for i in f_list_a:
     df = pd.read_csv(i)
-    dcta[int(i[0:4])] = df
+    dcta[int(i[-16:-12])] = df
     
 years = list(dcta.keys()) #sukurtas sąrašas nagrinėjamų metų (objektai int tipo)
-
+print(years)
 
 # padarom nauja dictionary su joinintom lentelem per namų ūkio ID. (metai : dataframe)
 dctall = {}
